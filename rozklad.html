@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rozkład Odjazdów</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d5c66c.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f9fc;
+      color: #000;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 2.5vw;
+      position: relative;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      height: 40px;
+    }
+
+    .logo-container i {
+      font-size: 2.5vw;
+      color: #e60000;
+    }
+
+    #clock {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2.5vw;
+      color: #d33737;
+      font-weight: bold;
+    }
+
+    .container {
+      height: 90vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.5vw;
+      background-color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #ddd;
+      z-index: 10;
+    }
+
+    #flix-rozklad thead th {
+      background-color: #b9eeb2;
+    }
+
+    .flix-section {
+      background-color: #d8f5d6;
+      border-top: 5px solid #21b532;
+    }
+
+    .flix-section h2 {
+      margin: 0;
+      padding: 10px;
+      background-color: #21b532;
+      color: white;
+      font-size: 2vw;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 9;
+    }
+
+    tr:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 2.5vw;
+      }
+
+      header {
+        font-size: 5vw;
+      }
+
+      .logo-container img {
+        height: 30px;
+      }
+
+      .logo-container i {
+        font-size: 5vw;
+      }
+
+      #clock {
+        font-size: 4.5vw;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <!-- <img src="pks_logo_no_bg_large.png" alt="PKS Przemyśl Logo" />  -->
+      <i class="fas fa-bus"></i>
+    </div>
+    ROZKŁAD ODJAZDÓW – PKS PRZEMYŚL
+    <div id="clock"></div>
+  </header>
+
+  <div class="container" id="scroll-container">
+    <table id="tabela-rozkladu">
+      <thead>
+        <tr>
+          <th>Kierunek</th>
+          <th>Przez</th>
+          <th>Przewoźnik</th>
+          <th>Stanowisko</th>
+          <th>Odjazdy</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="flix-section">
+      <h2>ODJAZDY FLIXBUS</h2>
+      <table id="flix-rozklad">
+        <thead>
+          <tr>
+            <th>Kierunek</th>
+            <th>Stanowisko</th>
+            <th>Dni kursowania</th>
+            <th>Odjazd</th>
+            <th>Przyjazd</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    fetch("rozklad.json")
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#tabela-rozkladu tbody");
+        data.forEach(row => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${row.kierunek}</td>
+            <td>${row.przez}</td>
+            <td>${row.przewoznik}</td>
+            <td>${row.stanowisko}</td>
+            <td>${row.godziny.join(", ")}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      });
+
+    fetch("flix.json")
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#flix-rozklad tbody");
+        data.forEach(row => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${row.kierunek}</td>
+            <td>${row.stanowisko}</td>
+            <td>${row.dni}</td>
+            <td>${row.odjazd}</td>
+            <td>${row.przyjazd}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      });
+
+    // Auto-scroll w pętli
+    const scrollContainer = document.getElementById('scroll-container');
+
+    function startAutoScrollLoop() {
+      const scrollSpeed = 1; // px per frame
+      const frameDelay = 20; // ms between frames
+      const pauseAtBottom = 2000; // pause at bottom
+      const pauseAtTop = 1000; // pause at top
+
+      function scrollDownStep() {
+        const atBottom =
+          scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight;
+
+        if (atBottom) {
+          setTimeout(() => {
+            scrollContainer.scrollTop = 0;
+            requestAnimationFrame(() => {
+              setTimeout(startAutoScrollLoop, pauseAtTop);
+            });
+          }, pauseAtBottom);
+        } else {
+          scrollContainer.scrollTop += scrollSpeed;
+          setTimeout(scrollDownStep, frameDelay);
+        }
+      }
+
+      scrollDownStep();
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(startAutoScrollLoop, 1000);
+    });
+
+    // Aktualny zegar
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
