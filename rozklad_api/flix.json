@@ -1,0 +1,94 @@
+[
+    {
+      "kierunek": "WARSZAWA LOTNISKO",
+      "stanowisko": 3,
+      "dni": "[1/1-/4/5/6/7]",
+      "odjazd": "6:35",
+      "przyjazd": "15:55"
+    },
+    {
+      "kierunek": "MEDYKA",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "6:40",
+      "przyjazd": "—"
+    },
+    {
+      "kierunek": "USTRZYKI GÓRNE",
+      "stanowisko": 3,
+      "dni": "[+/-/4/-/6/-/-]",
+      "odjazd": "7:25",
+      "przyjazd": "—"
+    },
+    {
+      "kierunek": "SZCZECIN",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "8:25",
+      "przyjazd": "—"
+    },
+    {
+      "kierunek": "KARPACZ BIAŁY JAR",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "8:40",
+      "przyjazd": "—"
+    },
+    {
+      "kierunek": "AALBORG",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "10:10",
+      "przyjazd": "—"
+    },
+    {
+      "kierunek": "HAGA",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "16:55"
+    },
+    {
+      "kierunek": "BRUGIA",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "17:15"
+    },
+    {
+      "kierunek": "MEDYKA",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "17:45"
+    },
+    {
+      "kierunek": "BREMA HBF",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "19:55"
+    },
+    {
+      "kierunek": "BONN",
+      "stanowisko": 3,
+      "dni": "[+/-/-/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "21:45"
+    },
+    {
+      "kierunek": "GDAŃSK LOTNISKO",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "22:35"
+    },
+    {
+      "kierunek": "MEDYKA",
+      "stanowisko": 3,
+      "dni": "[1/2/3/4/5/6/7]",
+      "odjazd": "—",
+      "przyjazd": "22:45"
+    }
+  ]
+  

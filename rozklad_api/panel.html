@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel admina – Rozkład</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      display: flex;
+      gap: 20px;
+    }
+    .left, .right {
+      flex: 1;
+    }
+    textarea {
+      width: 100%;
+      height: 500px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 4px 6px;
+      text-align: left;
+    }
+    select, button {
+      font-size: 14px;
+      padding: 6px 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h2>Podgląd danych</h2>
+    <select id="fileSelect" onchange="loadData()">
+      <option value="rozklad.json">rozklad.json</option>
+      <option value="flix.json">flix.json</option>
+    </select>
+    <div id="dataPreview">Wczytywanie...</div>
+  </div>
+
+  <div class="right">
+    <h2>Edytor JSON</h2>
+    <textarea id="jsonArea"></textarea><br>
+    <button onclick="saveData()">💾 Zapisz</button>
+  </div>
+
+  <script>
+    async function loadData() {
+      const file = document.getElementById('fileSelect').value;
+      try {
+        const res = await fetch('/api/' + file);
+        if (!res.ok) throw new Error("Błąd pobierania");
+        const data = await res.json();
+
+        // Wypełnij textarea JSON-em
+        document.getElementById('jsonArea').value = JSON.stringify(data, null, 2);
+
+        // Wyświetl podgląd
+        document.getElementById('dataPreview').innerHTML = generatePreview(data, file);
+      } catch (err) {
+        alert("Błąd wczytywania: " + err.message);
+      }
+    }
+
+    function generatePreview(data, file) {
+      if (!Array.isArray(data)) return "<p>Błąd: dane nie są listą.</p>";
+
+      let html = "<table><thead><tr>";
+
+      // Nagłówki na podstawie pierwszego wpisu
+      const first = data[0] || {};
+      for (const key in first) {
+        html += `<th>${key}</th>`;
+      }
+      html += "</tr></thead><tbody>";
+
+      // Wiersze danych
+      for (const item of data) {
+        html += "<tr>";
+        for (const key in first) {
+          let value = item[key];
+          if (Array.isArray(value)) {
+            value = value.join(", ");
+          }
+          html += `<td>${value ?? ""}</td>`;
+        }
+        html += "</tr>";
+      }
+
+      html += "</tbody></table>";
+      return html;
+    }
+
+    async function saveData() {
+      const file = document.getElementById('fileSelect').value;
+      const raw = document.getElementById('jsonArea').value;
+      try {
+        const parsed = JSON.parse(raw);
+        const res = await fetch('/api/' + file, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(parsed)
+        });
+        const result = await res.json();
+        alert(result.status || "Zapisano.");
+        loadData(); // odśwież podgląd
+      } catch (e) {
+        alert("Błąd zapisu: " + e.message);
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+[
+  {
+    "kierunek": "Barycz",
+    "przez": "Stubno",
+    "przewoznik": "Eurobus",
+    "stanowisko": 6,
+    "godziny": ["8:00 A", "12:20 A", "14:30 A"]
+  },
+  {
+    "kierunek": "Brzozów",
+    "przez": "Dynów",
+    "przewoznik": "Eurobus",
+    "stanowisko": 7,
+    "godziny": ["5:30 A", "12:20 A"]
+  },
+  {
+    "kierunek": "Brzuska",
+    "przez": "Bircza",
+    "przewoznik": "PKS",
+    "stanowisko": 7,
+    "godziny": ["14:20 Dg"]
+  },
+  {
+    "kierunek": "Ciemięrzowice",
+    "przez": "Orły",
+    "przewoznik": "PKS",
+    "stanowisko": 5,
+    "godziny": ["5:30 A", "6:10 A", "6:50 A", "7:15 A67", "8:40 A", "10:20 A6", "11:15 A", "12:20 A6", "13:00 A", "14:30 A6", "15:15 A"]
+  },
+  {
+    "kierunek": "Ciemięrzowice",
+    "przez": "Orły",
+    "przewoznik": "Eurobus",
+    "stanowisko": 6,
+    "godziny": ["15:45 A", "17:15 A", "19:10 A67", "20:35 A", "21:00 6", "22:10 A"]
+  },
+  {
+    "kierunek": "Dubiecko",
+    "przez": "",
+    "przewoznik": "Eurobus",
+    "stanowisko": 6,
+    "godziny": ["6:20 A", "6:55 A", "10:25 A", "17:00 A", "20:20 A"]
+  },
+  {
+    "kierunek": "Dynów",
+    "przez": "Dubiecko",
+    "przewoznik": "Eurobus",
+    "stanowisko": 5,
+    "godziny": ["5:30 A", "6:20 A", "6:35 A", "7:15 A67", "7:30 6", "7:40 A", "8:30 A", "9:20 A6", "10:00 A", "10:40 A7", "11:20 A6", "12:00 A6", "13:20 A6", "14:20 A6", "14:40 A", "15:00 A", "15:20 A", "15:30 A", "15:50 A"]
+  },
+  {
+    "kierunek": "Dynów",
+    "przez": "Dubiecko",
+    "przewoznik": "PKS",
+    "stanowisko": 6,
+    "godziny": ["12:20 A67", "17:05 A", "17:20 A", "18:20 A", "19:20 A67", "22:10 A6"]
+  },
+  {
+    "kierunek": "Fredropol",
+    "przez": "Hermanowice",
+    "przewoznik": "PKS",
+    "stanowisko": 4,
+    "godziny": ["12:45 Dg"]
+  },
+  {
+    "kierunek": "Fredropol",
+    "przez": "Hermanowice, Młodowice",
+    "przewoznik": "Eurobus",
+    "stanowisko": 4,
+    "godziny": ["10:55 Dg", "14:15 S", "15:35 S"]
+  },
+  {
+    "kierunek": "Hruszowice",
+    "przez": "Stażawa, Stubno, Barycz",
+    "przewoznik": "Eurobus",
+    "stanowisko": 2,
+    "godziny": ["7:50 A"]
+  },
+  {
+    "kierunek": "Hruszowice",
+    "przez": "Stubno, Barycz",
+    "przewoznik": "PKS",
+    "stanowisko": 2,
+    "godziny": ["10:50 A"]
+  },
+  {
+    "kierunek": "Huta Brzuska",
+    "przez": "Bircza",
+    "przewoznik": "PKS",
+    "stanowisko": 7,
+    "godziny": ["5:30 A", "6:40 A", "7:15 A6", "8:40 A", "9:40 A", "10:50 A6", "11:50 A", "13:00 A", "13:30 S", "14:10 A6", "15:20 A"]
+  },
+  {
+    "kierunek": "Kalników",
+    "przez": "",
+    "przewoznik": "Eurobus",
+    "stanowisko": 2,
+    "godziny": ["6:20 A6", "17:20 A6", "22:10 A6"]
+  },
+  {
+    "kierunek": "Kalwaria",
+    "przez": "Darowice, Sierakośce",
+    "przewoznik": "PKS",
+    "stanowisko": 4,
+    "godziny": ["10:00 H", "11:30 7", "15:00 7", "16:30 7"]
+  },
+  {
+    "kierunek": "Korytniki Wieś",
+    "przez": "",
+    "przewoznik": "PKS",
+    "stanowisko": 3,
+    "godziny": ["6:20 A", "7:30 A", "11:15 A", "13:35 A", "14:40 A", "15:50 A"]
+  },
+  {
+    "kierunek": "Kosienice",
+    "przez": "Maćkowice",
+    "przewoznik": "PKS",
+    "stanowisko": 7,
+    "godziny": ["7:10", "11:30", "15:40 Dg"]
+  },
+  {
+    "kierunek": "Kupna",
+    "przez": "Krasiczyn",
+    "przewoznik": "PKS",
+    "stanowisko": 3,
+    "godziny": ["7:55 H", "12:00 H", "14:10 S", "15:35 S"]
+  },
+  {
+    "kierunek": "Kuźmina",
+    "przez": "Bircza",
+    "przewoznik": "PKS",
+    "stanowisko": 7,
+    "godziny": ["5:30", "12:30 S", "16:10 Dg"]
+  },
+  {
+    "kierunek": "Leszczawa",
+    "przez": "Bircza",
+    "przewoznik": "PKS",
+    "stanowisko": 7,
+    "godziny": ["5:30 S", "18:00 H"]
+  },
+  {
+    "kierunek": "Lipa",
+    "przez": "Bircza",
+    "przewoznik": "Eurobus",
+    "stanowisko": 6,
+    "godziny": ["7:30 A67", "11:25 A", "13:00 A", "13:30 A", "15:25 A67", "19:20 A67"]
+  },
+  {
+    "kierunek": "Nowosiółki Dydyńskie",
+    "przez": "Sierakośce",
+    "przewoznik": "PKS",
+    "stanowisko": 4,
+    "godziny": ["14:00 S"]
+  },
+  {
+    "kierunek": "Posada Rybotycka",
+    "przez": "Darowice, Fredropol",
+    "przewoznik": "PKS",
+    "stanowisko": 4,
+    "godziny": ["7:15 Dg", "10:45", "13:15", "15:40 Dg"]
+  },
+  {
+    "kierunek": "Posada Rybotycka",
+    "przez": "Fredropol",
+    "przewoznik": "Eurobus",
+    "stanowisko": 4,
+    "godziny": ["14:15 Dg"]
+  },
+  {
+    "kierunek": "Posada Rybotycka",
+    "przez": "Sierakośce, Nowosiółki Dydyńskie",
+    "przewoznik": "PKS",
+    "stanowisko": 4,
+    "godziny": ["6:15", "14:00 S", "15:40 Dg"]
+  },
+  {
+    "kierunek": "Rzeczpol Pętla",
+    "przez": "Korytniki",
+    "przewoznik": "PKS",
+    "stanowisko": 3,
+    "godziny": ["6:20", "11:15", "13:40"]
+  },
+  {
+    "kierunek": "Rokitnica, Wola",
+    "przez": "Maćkowice, Kosienice",
+    "przewoznik": "PKS",
+    "stanowisko": 7,
+    "godziny": ["7:10", "11:30", "14:30 Dg", "15:40 Dg"]
+  },
+  {
+    "kierunek": "Rybotycze",
+    "przez": "Darowice, Fredropol",
+    "przewoznik": "Eurobus",
+    "stanowisko": 4,
+    "godziny": ["6:20 H"]
+  },
+  {
+    "kierunek": "Rybotycze",
+    "przez": "Sierakośce, Nowosiółki Dydyńskie",
+    "przewoznik": "PKS",
+    "stanowisko": 4,
+    "godziny": ["10:45", "14:15"]
+  },
+  {
+    "kierunek": "Rzeszów",
+    "przez": "Jarosław, Przeworsk, Łańcut",
+    "przewoznik": "Eurobus",
+    "stanowisko": 2,
+    "godziny": [
+      "4:55 A", "5:20 A", "5:30 A", "5:50 A67", "5:50 6", "6:10 A", "6:25 A",
+      "6:40 A6", "6:45", "7:00 A", "7:20 A", "7:40 A67", "8:20 A", "8:45 A",
+      "9:05 A", "9:40 A", "10:00 A6", "10:20 A", "10:45 A", "11:00 A6",
+      "11:30 A", "12:00 A6", "12:20 A", "13:00 A", "13:30 A", "14:00 A6",
+      "14:00 6", "14:15 A", "14:30 A", "15:05 A", "15:30 A67", "16:15 A",
+      "17:30 A", "19:00 A", "19:00 AP"]
+  },
+  
+    {
+      "kierunek": "POSADA RYBOTYCKA",
+      "przez": "Fredropol",
+      "przewoznik": "PKS",
+      "stanowisko": 4,
+      "godziny": ["5:40 Dg", "13:15 Dg"]
+    },
+    {
+      "kierunek": "POSADA RYBOTYCKA",
+      "przez": "Sierakośce, Nowosiółki Dydyńskie",
+      "przewoznik": "PKS",
+      "stanowisko": 4,
+      "godziny": ["7:20 Dg", "11:30 E", "15:40 Dg"]
+    },
+    {
+      "kierunek": "RECZPOL PĘTLA",
+      "przez": "Korytniki",
+      "przewoznik": "Eurobus",
+      "stanowisko": 6,
+      "godziny": ["11:15 A", "14:40 A"]
+    },
+    {
+      "kierunek": "ROKIETNICA, WOLA",
+      "przez": "Maćkowice, Kosienice",
+      "przewoznik": "PKS",
+      "stanowisko": 7,
+      "godziny": ["7:20 Dg", "11:00 Dg", "14:30 Dg", "15:40 Dg"]
+    },
+    {
+      "kierunek": "RYBOTYCZE",
+      "przez": "Darowice, Fredropol",
+      "przewoznik": "PKS",
+      "stanowisko": 4,
+      "godziny": ["7:30 A", "14:35 H", "15:40 H"]
+    },
+    {
+      "kierunek": "RYBOTYCZE",
+      "przez": "Sierakośce, Nowosiółki Dydyńskie",
+      "przewoznik": "PKS",
+      "stanowisko": 4,
+      "godziny": ["10:10 Dg", "14:35 Dg"]
+    },
+    {
+      "kierunek": "RZESZÓW",
+      "przez": "Jarosław, Przeworsk, Łańcut",
+      "przewoznik": "Eurobus",
+      "stanowisko": 5,
+      "godziny": [
+        "4:20 A", "4:50 A", "6:00 A6", "5:15 A", "5:30 A", "5:50 A6",
+        "6:10 A7", "6:25 A", "6:40 A6", "7:00 A", "7:20 A", "7:40 A67",
+        "8:00 A", "8:20 A", "8:40 A", "9:05 A", "9:20 A", "9:40 A",
+        "10:00 A6", "10:15 A", "10:30 A", "10:45 A", "11:00 A6", "11:30 A",
+        "12:00 A", "12:20 A", "12:40 A", "13:10 A", "13:25 A", "13:40 A",
+        "13:55 A", "13:10 A", "13:20 6", "13:30 A", "13:45 AP", "14:00 6 Jar",
+        "14:10 A", "14:30 AP", "14:50 A", "15:10 A Jar", "15:30 A67",
+        "16:15 A", "17:30 A Jar", "19:00 AP"]
+    },
+    {
+      "kierunek": "ŻOHATYN",
+      "przez": "",
+      "przewoznik": "Eurobus",
+      "stanowisko": 7,
+      "godziny": ["11:25 A", "15:25 A"]
+    },
+    {
+      "kierunek": "WALAWA",
+      "przez": "",
+      "przewoznik": "Eurobus",
+      "stanowisko": 8,
+      "godziny": ["6:05 A", "7:25 6", "10:15 A6", "11:50 A6", "15:40 A", "17:10 A"]
+    },
+    {
+      "kierunek": "JASIONKA AIRPORT ✈",
+      "przez": "",
+      "przewoznik": "Eurobus",
+      "stanowisko": 5,
+      "godziny": ["7:20 A", "7:40 67", "11:20 A"]
+    },
+    {
+      "kierunek": "WARSZAWA",
+      "przez": "Medyka, Przemyśl, Jarosław, Przeworsk, Biłgoraj, Lublin, Warszawa",
+      "przewoznik": "PKS Biłgoraj",
+      "stanowisko": 3,
+      "godziny": ["6:50", "11:20", "14:25"]
+    },
+    {
+      "kierunek": "WARSZAWA",
+      "przez": "Rzeszów, Kolbuszowa, Nowa Dęba, Opatów, Ostrowiec Św., Radom, Lotnisko Chopina",
+      "przewoznik": "Neobus",
+      "stanowisko": 3,
+      "godziny": ["6:45", "10:35", "16:35", "23:50"]
+    },
+    {
+      "kierunek": "WROCŁAW",
+      "przez": "Rzeszów, Kraków MDA, Kraków Airport Balice, Katowice, Gliwice",
+      "przewoznik": "Neobus",
+      "stanowisko": 3,
+      "godziny": ["6:45", "10:35", "16:35", "23:50"]
+    },
+    {
+      "kierunek": "ŁÓDŹ",
+      "przez": "Rzeszów, Kolbuszowa, Połaniec, Staszów, Busko Zdrój, Kielce, Piotrków Trybunalski",
+      "przewoznik": "Neobus",
+      "stanowisko": 3,
+      "godziny": ["10:35"]
+    }
+  ]
+ 
